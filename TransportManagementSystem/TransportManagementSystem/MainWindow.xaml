@@ -1,12 +1,46 @@
 ﻿<Window x:Class="TransportManagementSystem.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TransportManagementSystem"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Transport Management System"
+        Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFD0C3C3">
+
+    <!-- OUTSIDE -->
+    <Grid Margin="16">
+        <Border Background="White" CornerRadius="12" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="12"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- LEFT MENU -->
+                <Border Grid.Column="0" Background="#F3F5F7" CornerRadius="10" Padding="12">
+                    <StackPanel>
+                        <TextBlock Text="Menu" FontWeight="Bold" FontSize="16" Margin="0,0,0,16"/>
+
+                        <Button x:Name="BtnDrivers" Content="Drivers" Height="40" Margin="0,0,0,8"
+                                Click="BtnDrivers_Click"/>
+                        <Button x:Name="BtnCustomers" Content="Customers" Height="40" Margin="0,0,0,8"
+                                Click="BtnCustomers_Click"/>
+                        <Button x:Name="BtnVehicles" Content="Vehicles" Height="40" Margin="0,0,0,8"
+                                Click="BtnVehicles_Click"/>
+                        <Button x:Name="BtnBookings" Content="Bookings" Height="40" Margin="0,0,0,8"
+                                Click="BtnBookings_Click"/>
+                        <Button x:Name="BtnDashboard" Content="Dashboard" Height="40"
+                                Click="BtnDashboard_Click"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- CONTENU -->
+                <!--<Border Grid.Column="2" Background="White" CornerRadius="10" Padding="10">
+                    <Frame x:Name="MainFrame"
+                           NavigationUIVisibility="Hidden"/>
+                </Border>-->
+
+            </Grid>
+        </Border>
     </Grid>
 </Window>
