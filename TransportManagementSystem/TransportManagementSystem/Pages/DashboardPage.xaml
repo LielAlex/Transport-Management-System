@@ -1,14 +1,197 @@
 ﻿<Page x:Class="TransportManagementSystem.Pages.DashboardPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:TransportManagementSystem.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="DashboardPage">
+      Title="Dashboard">
 
-    <Grid>
-        
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="260"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ================= LEFT SIDE ================= -->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- TITLE -->
+            <TextBlock Text="DashBoard"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="#2B579A"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,25"/>
+
+            <!-- CARDS -->
+            <UniformGrid Grid.Row="1"
+                         Columns="3"
+                         Rows="2"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Top"
+                         Margin="20"
+                         >
+
+                <!-- Vehicle -->
+                <Border Background="#F8A5A5"
+                        Width="200"
+                        Height="100"
+                        Margin="15"
+                        CornerRadius="6">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Vehicle"
+                                   FontWeight="Bold"
+                                   Foreground="DarkRed"/>
+                        <TextBlock x:Name="TxtVehicleCount"
+                                   Text="2"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="Red"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Users -->
+                <Border Background="#DCE6E1"
+                        Width="200"
+                        Height="100"
+                        Margin="15"
+                        CornerRadius="6">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Users"
+                                   FontWeight="Bold"
+                                   Foreground="#B36B00"/>
+                        <TextBlock x:Name="TxtUsersCount"
+                                   Text="2"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="#B36B00"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Drivers -->
+                <Border Background="#7DE2B8"
+                        Width="200"
+                        Height="100"
+                        Margin="15"
+                        CornerRadius="6">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Drivers"
+                                   FontWeight="Bold"
+                                   Foreground="DarkGreen"/>
+                        <TextBlock x:Name="TxtDriversCount"
+                                   Text="3"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="Blue"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Bookings -->
+                <Border Background="#F4C78E"
+                        Width="200"
+                        Height="100"
+                        Margin="15"
+                        CornerRadius="6">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Bookings"
+                                   FontWeight="Bold"
+                                   Foreground="#B36B00"/>
+                        <TextBlock x:Name="TxtBookingsCount"
+                                   Text="6"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="#B36B00"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Customers -->
+                <Border Background="#C9E4E4"
+                        Width="200"
+                        Height="100"
+                        Margin="15"
+                        CornerRadius="6">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Customers"
+                                   FontWeight="Bold"
+                                   Foreground="DarkGreen"/>
+                        <TextBlock x:Name="TxtCustomersCount"
+                                   Text="3"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="Blue"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Income -->
+                <Border Background="#F3D2D8"
+                        Width="200"
+                        Height="100"
+                        Margin="15"
+                        CornerRadius="6">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Income"
+                                   FontWeight="Bold"
+                                   Foreground="DarkRed"/>
+                        <TextBlock x:Name="TxtIncome"
+                                   Text="Rs 76650"
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   Foreground="DarkRed"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+            </UniformGrid>
+        </Grid>
+
+        <!-- ================= RIGHT SIDE ================= -->
+        <Border Grid.Column="1"
+                Margin="10,0,0,0"
+                Background="#F3F5F7"
+                CornerRadius="12"
+                Padding="14">
+
+            <StackPanel HorizontalAlignment="Center">
+
+                <Grid Width="160" Height="160" Margin="0,10,0,18">
+                    <Ellipse Stroke="#1E63D5"
+                             StrokeThickness="18"
+                             Fill="White"/>
+                    <TextBlock Text="Summary"
+                               Foreground="Crimson"
+                               FontWeight="Bold"
+                               FontSize="16"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Grid>
+
+                <TextBlock Text="Most Income"
+                           Foreground="Goldenrod"
+                           FontWeight="Bold"
+                           FontSize="18"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Suresh"
+                           Foreground="Crimson"
+                           FontWeight="Bold"
+                           FontSize="18"
+                           HorizontalAlignment="Center"
+                           Margin="0,10,0,0"/>
+
+                <TextBlock Text="Sunila"
+                           Foreground="Green"
+                           FontWeight="Bold"
+                           FontSize="18"
+                           HorizontalAlignment="Center"
+                           Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+
     </Grid>
 </Page>

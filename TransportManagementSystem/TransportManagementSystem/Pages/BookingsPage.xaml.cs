@@ -1,28 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TransportManagementSystem.Pages
 {
-    /// <summary>
-    /// Interaction logic for BookingsPage.xaml
-    /// </summary>
     public partial class BookingsPage : Page
     {
         public BookingsPage()
         {
             InitializeComponent();
+
+            // Exemples (à remplacer par DB)
+            CmbCustomer.Items.Add("Customer 1");
+            CmbCustomer.Items.Add("Customer 2");
+            CmbCustomer.SelectedIndex = 0;
+
+            CmbVehicle.Items.Add("Vehicle A");
+            CmbVehicle.Items.Add("Vehicle B");
+            CmbVehicle.SelectedIndex = 0;
+
+            DpPickupDate.SelectedDate = System.DateTime.Today;
+            DpReturnDate.SelectedDate = System.DateTime.Today;
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Save booking");
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Edit booking");
+        }
+
+        private void BtnFire_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Delete/Cancel booking");
         }
     }
 }
